@@ -1,6 +1,14 @@
+DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS playlists_tracks;
 DROP TABLE IF EXISTS playlists;
 DROP TABLE IF EXISTS tracks;
+
+CREATE TABLE user (
+  id serial PRIMARY KEY,
+  username text UNIQUE NOT NULL,
+  password text NOT NULL
+
+);
 
 CREATE TABLE tracks (
   id serial PRIMARY KEY,
