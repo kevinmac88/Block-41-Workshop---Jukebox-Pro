@@ -12,7 +12,7 @@ import requireBody from "#middleware/requireBody";
 router.post(
   "/register",
   requireBody(["username", "password"]),
-  async (requireBody, resizeBy, next) => {
+  async (req, res, next) => {
     try {
       //get username and pw from req body, assign to variables plug into function next
       const { username, password } = req.body;
@@ -35,7 +35,7 @@ router.post(
 router.post(
   "/login",
   requireBody(["username", "password"]),
-  async (req, resizeBy, next) => {
+  async (req, res, next) => {
     try {
       //get credentials from request
       const { username, password } = req.body;

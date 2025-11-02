@@ -81,7 +81,7 @@ async function seed() {
   }
 
   for (let i = 14; i < 20; i++) {
-    await createPlaylistTrack(bobsPlaylist2.id, tracks[i].id);
+    await createPlaylistTrack(bobPlaylist2.id, tracks[i].id);
   }
 
   console.log("added tracks to bob's playlists");

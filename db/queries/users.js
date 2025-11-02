@@ -33,7 +33,7 @@ export async function getUserById(id) {
 
 export async function getUserByUsername(username) {
   const SQL = `
-    SELECT * FORM users
+    SELECT * FROM users
     WHERE username = $1`;
 
   const {
